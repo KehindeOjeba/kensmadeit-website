@@ -6,6 +6,7 @@ import cartAnimation from "@/assets/cart-animation.json";
 import Image from "next/image";
 import Logo from "@/assets/logo.png";
 import MobileNav from "./MobileNavBar";
+import { Badge } from "@/components/ui/badge";
 
 const Navbar = () => {
   return (
@@ -20,7 +21,16 @@ const Navbar = () => {
         <div className="flex justify-center items-center gap-5">
           <input className="outline-none h-5  rounded-full p-2 text-dark" />
           <IoSearchCircleOutline className="size-5" />
-          <Lottie animationData={cartAnimation} className="w-[50px]" />
+          {/* <Badge
+  anchorOrigin={{
+    vertical: 'bottom',
+    horizontal: 'right',
+  }}
+> */}
+          <Lottie animationData={cartAnimation} className="w-[50px]"  />
+          
+          
+          {/* </Badge> */}
         </div>
       </div>
       <div className="lg:hidden">
