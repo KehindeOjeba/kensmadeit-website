@@ -3,7 +3,7 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/component/navbar/Navbar";
 import Footer from "@/component/footer/Footer";
-
+import ShopContextProvider from "@/context/ShopContext";
 // const geistSans = localFont({
 //   src: "./fonts/GeistVF.woff",
 //   variable: "--font-geist-sans",
@@ -29,14 +29,24 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+            <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+      </head>
+      
       <body className={poppins.className}>
+      
         <div className="m-auto flex flex-col justify-between">
-          <Navbar />
 
+          <Navbar />
+          <ShopContextProvider>
           {children}
+          </ShopContextProvider>
           <Footer />
+         
         </div>
+       
       </body>
+
     </html>
   );
 }
