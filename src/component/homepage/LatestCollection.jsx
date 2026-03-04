@@ -4,7 +4,7 @@ import  { useContext } from 'react'
 const LatestCollection = () => {
     const {products} = useContext(ShopContext)
   return (
-    <div>LatestCollectionzzzz</div>
+    <div>LatestCollection</div>
   )
 }
 
