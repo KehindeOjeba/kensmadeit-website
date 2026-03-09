@@ -5,9 +5,8 @@ const LatestCollection = () => {
     const {products} = useContext(ShopContext)
   return (
     <div>
-      
 
-      Building Latest Collection Component 
+      <h1 className='text-3xl font-bold text-center my-10'>Latest Collection</h1>
     </div>
   )
 }
